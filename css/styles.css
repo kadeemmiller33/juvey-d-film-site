@@ -1,0 +1,231 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BASE ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #111;
+
+    scroll-behavior: smooth;
+    padding-top: 80px;
+}
+
+/* ===== NAV ===== */
+nav.container-fluid {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+}
+
+nav ul li a {
+    padding: 10px 15px;
+}
+
+/* ===== SCENE ===== */
+.scene {
+    min-height: 100vh;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px 20px;
+    overflow: hidden;
+}
+
+/* ===== 🔥 FIXED BACKGROUND IMAGES ONLY ===== */
+.scene > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: 0;
+
+    filter: brightness(0.85);
+}
+
+/* ===== CONTENT BOX ===== */
+.overlay {
+    position: relative;
+    z-index: 2;
+
+    max-width: 800px;
+    width: 100%;
+
+    background: rgba(255,255,255,0.95);
+    padding: 50px;
+    margin: 40px auto;
+
+    border-radius: 12px;
+    text-align: center;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+/* ===== TEXT ===== */
+.overlay h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.overlay h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.overlay p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* ===== LIGHT SECTIONS ===== */
+.scene.dark {
+    background: #f4f4f4;
+}
+
+/* ===== CARDS ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== 🔥 FIXED CARD IMAGES ===== */
+.card img {
+    position: relative;
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+
+    z-index: 1;
+    filter: none;
+}
+
+/* ===== PITCH DECK ===== */
+.pitch-deck {
+    text-align: center;
+}
+
+.pitch-deck h2 {
+    margin-bottom: 30px;
+}
+
+/* ===== SLIDER ===== */
+.slider {
+    position: relative;
+    margin: 20px auto 30px auto;
+    max-width: 1000px;
+    min-height: 400px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.5s ease;
+
+    display: flex;
+    justify-content: center;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    z-index: 2;
+}
+
+.slide img {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* ===== CONTROLS ===== */
+.controls {
+    margin-top: 20px;
+}
+
+.controls button {
+    background: #000;
+    color: #fff;
+    border: none;
+
+    padding: 12px 20px;
+    border-radius: 6px;
+
+    margin: 0 10px;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.controls button:hover {
+    background: #333;
+}
+
+.controls button:active {
+    transform: scale(0.95);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    .overlay {
+        padding: 25px;
+    }
+
+    .overlay h1 {
+        font-size: 28px;
+    }
+
+    .overlay h2 {
+        font-size: 22px;
+    }
+
+    .overlay p {
+        font-size: 15px;
+    }
+}
