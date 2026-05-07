@@ -2,225 +2,515 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
 
     <title>Stepping Off with Juvey-D</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
 <nav class="container-fluid">
-    <ul><li><strong>Wendell Moore Films</strong></li></ul>
+
+    <div class="nav-left">
+
+        <strong>Wendell Moore Films</strong>
+
+        <div class="nav-awards">
+            <img src="assets/award-1.jpg" alt="Award 1">
+            <img src="assets/award-2.jpg" alt="Award 2">
+            <img src="assets/award-3.jpg" alt="Award 3">
+            <img src="assets/award-4.jpg" alt="Award 4">
+            <img src="assets/award-5.jpg" alt="Award 5">
+        </div>
+
+    </div>
+
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Story</a></li>
-        <li><a href="#">Cast</a></li>
-        <li><a href="#" role="button">Contact</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#home">Gallery</a></li>
+        <li><a href="#cast">Cast</a></li>
+        <li><a href="#creators">Creators</a></li>
+
+        <li>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=walphonsoore@gmail.com"
+               target="_blank"
+               role="button">
+                Contact
+            </a>
+        </li>
     </ul>
+
 </nav>
 
 <main class="container">
 
-    <!-- HERO -->
-    <section class="scene">
-        <img src="assets/hero.jpg">
-        <div class="overlay">
-            <h1>Stepping Off with Juvey-D</h1>
-            <p>A Story About a Boy and a Camera</p>
+    <!-- STORY SECTION -->
+    <section id="story" class="story-section">
+
+        <div class="story-image">
+            <img src="assets/synopsis-cover.jpg"
+                 alt="Stepping Off with Juvey-D Synopsis">
         </div>
+
+        <div class="story-wrapper">
+
+            <h2>Synopsis</h2>
+
+            <p>
+                After rediscovering footage he shot on his father's
+                video camera as a teenager, Dion “Juvey-D” Jackson,
+                now an adult, revisits his formative years.
+                Each tape reveals aspects of his life that helped shape him.
+            </p>
+
+            <p>
+                The year is 1992 and 14-year-old Dion periodically
+                sneaks his father’s rarely-used video camera out onto
+                the streets of Brooklyn.
+            </p>
+
+            <p>
+                His plan is simple: record him and his best friend
+                Antman “bugging out” after school.
+                His inner monologue guides us over a five-day period.
+            </p>
+
+            <p>
+                During that time, we see the making of a personal
+                diary, a street adventure with dire consequences,
+                and a glimpse of a Brooklyn neighborhood in flux.
+            </p>
+
+            <h2>Visual Approach</h2>
+
+            <p>
+                The film is entirely shot from Juvey-D’s POV to show
+                how he sees adults, girls, threats, and the world he
+                shares with his best friend Antman.
+            </p>
+
+            <p>
+                Shot on location in Fort Greene / Clinton Hill,
+                Brooklyn, the neighborhood serves as an ideal backdrop
+                for the film.
+            </p>
+
+            <p>
+                The shooting style is free-moving and vérité,
+                using natural lighting to create a raw
+                documentary-style realism.
+            </p>
+
+            <p>
+                The film was shot on Hi-8 video, embracing the grain
+                and imperfections of that format.
+            </p>
+
+        </div>
+
     </section>
 
-    <!-- RED CARPET -->
-    <section class="scene">
-        <img src="assets/redcarpet-1.jpg">
-        <div class="overlay">
-            <h2>Red Carpet Premiere</h2>
-            <p>Moments from the International Black Diversity Film Festival.</p>
+    <!-- GALLERY / INTRO SLIDER -->
+    <section id="home" class="intro-slider">
+
+        <div class="intro-slide active">
+            <img src="assets/hero.jpg"
+                 alt="Stepping Off with Juvey-D Poster">
         </div>
+
+        <div class="intro-slide">
+            <img src="assets/redcarpet-1.jpg"
+                 alt="Red Carpet">
+        </div>
+
+        <div class="intro-slide">
+            <img src="assets/gala-main.jpg"
+                 alt="Festival Gala">
+        </div>
+
+        <div class="intro-slide">
+            <img src="assets/group-1.jpg"
+                 alt="Group Photo">
+        </div>
+
+        <div class="intro-slide">
+            <img src="assets/stage-awards.jpg"
+                 alt="Awards Stage">
+        </div>
+
+        <!-- ADDED GALLERY PHOTOS -->
+        <div class="intro-slide">
+            <img src="assets/add-1.jpg"
+                 alt="Additional Gallery Photo 1">
+        </div>
+
+        <div class="intro-slide">
+            <img src="assets/add-2.jpg"
+                 alt="Additional Gallery Photo 2">
+        </div>
+
+        <div class="intro-slide">
+            <img src="assets/add-3.jpg"
+                 alt="Additional Gallery Photo 3">
+        </div>
+
+        <div class="intro-slide">
+            <img src="assets/add-4.jpg"
+                 alt="Additional Gallery Photo 4">
+        </div>
+
+        <div class="intro-slide">
+            <img src="assets/add-5.jpg"
+                 alt="Additional Gallery Photo 5">
+        </div>
+
+        <div class="intro-slide">
+            <img src="assets/add-6.jpg"
+                 alt="Additional Gallery Photo 6">
+        </div>
+
+        <div class="intro-slide">
+            <img src="assets/add-7.jpg"
+                 alt="Additional Gallery Photo 7">
+        </div>
+
+        <div class="intro-controls">
+            <button id="introPrev">Prev</button>
+            <button id="introNext">Next</button>
+        </div>
+
     </section>
 
-    <!-- AWARD -->
-    <section class="scene">
-        <img src="assets/award-pass.jpg">
+    <!-- VIDEO SECTION -->
+    <section class="scene dark trailer-section">
+
         <div class="overlay">
-            <h2>Award Winning Film</h2>
-            <p>Best First Feature Award Winner</p>
+
+            <h2 id="videoSectionTitle">Origin Story</h2>
+
+            <p id="videoSectionDescription">
+                Discover the beginnings of
+                <em>Stepping Off with Juvey-D</em>.
+            </p>
+
+            <div class="video-slider">
+
+                <div class="video-slide active">
+                    <div class="video-wrapper">
+                        <video controls poster="assets/hero.jpg">
+                            <source src="assets/jon-trailer.mp4"
+                                    type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="video-slide">
+                    <div class="video-wrapper">
+                        <video controls>
+                            <source src="assets/award-speech.mp4"
+                                    type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="controls">
+                <button id="videoPrev">Prev</button>
+                <button id="videoNext">Next</button>
+            </div>
+
         </div>
+
     </section>
 
-    <!-- GALA -->
-    <section class="scene">
-        <img src="assets/gala-main.jpg">
-        <div class="overlay">
-            <h2>Festival Gala</h2>
-            <p>Celebrating storytelling and independent film.</p>
-        </div>
-    </section>
-
-    <!-- STAGE -->
-    <section class="scene">
-        <img src="assets/stage-awards.jpg">
-        <div class="overlay">
-            <h2>Awards Ceremony</h2>
-            <p>Recognizing powerful voices in cinema.</p>
-        </div>
-    </section>
-
-    <!-- GROUP -->
-    <section class="scene">
-        <img src="assets/group-1.jpg">
-        <div class="overlay">
-            <h2>Community & Collaboration</h2>
-            <p>Bringing stories to life together.</p>
-        </div>
-    </section>
-
-    <!-- 🎬 PITCH DECK -->
+    <!-- PITCH DECK -->
     <section class="scene dark pitch-deck">
 
-        <h2>Pitch Deck</h2>
+        <div class="overlay">
 
-        <div class="slider">
+            <h2>Pitch Deck</h2>
 
-            <div class="slide active">
-                <img src="assets/pd01.png">
+            <div class="slider">
+
+                <div class="slide active">
+                    <img src="assets/pd01.png" alt="Pitch Deck 1">
+                </div>
+
+                <div class="slide">
+                    <img src="assets/pd02.png" alt="Pitch Deck 2">
+                </div>
+
+                <div class="slide">
+                    <img src="assets/pd03.png" alt="Pitch Deck 3">
+                </div>
+
+                <div class="slide">
+                    <img src="assets/pd04.png" alt="Pitch Deck 4">
+                </div>
+
+                <div class="slide">
+                    <img src="assets/pd06.png" alt="Pitch Deck 5">
+                </div>
+
             </div>
 
-            <div class="slide">
-                <img src="assets/pd02.png">
+            <div class="controls">
+                <button id="prevBtn">Prev</button>
+                <button id="nextBtn">Next</button>
             </div>
 
-            <div class="slide">
-                <img src="assets/pd03.png">
-            </div>
-
-            <div class="slide">
-                <img src="assets/pd04.png">
-            </div>
-
-            <!-- pd05 REMOVED -->
-
-            <div class="slide">
-                <img src="assets/pd06.png">
-            </div>
-
-        </div>
-
-        <div class="controls">
-            <button id="prevBtn">Prev</button>
-            <button id="nextBtn">Next</button>
         </div>
 
     </section>
 
-    <!-- 🎭 CAST -->
-    <section class="scene dark">
+    <!-- CAST -->
+    <section id="cast" class="scene dark">
+
         <div class="overlay">
+
             <h2>Cast</h2>
 
             <div class="cards">
 
                 <div class="card">
-                    <img src="assets/chris.jpg">
+                    <img src="assets/chris.jpg" alt="Chris Jacques">
+
                     <h3>Chris Jacques</h3>
-                    <p>Juvey-D</p>
+
+                    <p><strong>Juvey-D</strong></p>
+
+                    <p>
+                        Chris Jacques portrays the lead
+                        character Juvey-D.
+                    </p>
                 </div>
 
                 <div class="card">
-                    <img src="assets/ian.jpg">
+                    <img src="assets/ian.jpg" alt="Ian Reid">
+
                     <h3>Ian Reid</h3>
-                    <p>Antman</p>
+
+                    <p><strong>Antman</strong></p>
+
+                    <p>
+                        Ian Reid is a multi-disciplinary artist
+                        working across photography and film.
+                    </p>
                 </div>
 
                 <div class="card">
-                    <img src="assets/flix.jpg">
+                    <img src="assets/flix.jpg" alt="Mr. F.L.I.X.">
+
                     <h3>Mr. F.L.I.X.</h3>
-                    <p>Baby Death</p>
-                </div>
 
-                <div class="card">
-                    <img src="assets/group-1.jpg">
-                    <h3>Supporting Cast</h3>
+                    <p><strong>Baby Death</strong></p>
+
+                    <p>
+                        Revolutionary rapper and Brooklyn artist.
+                    </p>
                 </div>
 
             </div>
 
         </div>
+
     </section>
 
-    <!-- 🎬 CREATORS -->
-    <section class="scene dark creators-section">
+    <!-- CREATORS -->
+    <section id="creators" class="scene dark creators-section">
+
         <div class="overlay">
+
             <h2>Creators</h2>
 
             <div class="cards">
 
                 <div class="card">
-                    <img src="assets/wendell.jpg">
+                    <img src="assets/wendell.jpg" alt="Wendell Moore">
+
                     <h3>Wendell Moore</h3>
+
                     <p><strong>Director, Writer, Producer</strong></p>
+
                     <p>
-                        Wendell is the writer, editor, producer, and director of Juvey-D.
-                        He has produced music videos and industrial films in NYC.
+                        Wendell is the writer, editor,
+                        producer, and director of
+                        <em>Stepping Off with Juvey-D</em>.
                     </p>
                 </div>
 
                 <div class="card">
-                    <img src="assets/peter.jpg">
+                    <img src="assets/peter.jpg" alt="Peter John Marquez">
+
                     <h3>Peter John Marquez</h3>
+
                     <p><strong>Director of Photography</strong></p>
+
                     <p>
-                        His work includes The Apollo Theatre, New York Public Theater,
-                        and the Kennedy Center.
+                        Peter’s work includes The Apollo Theatre,
+                        New York Public Theater, and the Kennedy Center.
                     </p>
                 </div>
 
                 <div class="card">
-                    <img src="assets/jon.jpg">
+                    <img src="assets/jon.jpg" alt="Jon Calvert">
+
                     <h3>Jon Calvert</h3>
+
                     <p><strong>Producer</strong></p>
+
                     <p>
-                        Working on Juvey-D since 1990 across production, editing, and writing.
+                        Jon has been part of Juvey-D since 1990
+                        contributing across production,
+                        editing, and writing.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="assets/terrance-copeland.jpg"
+                         alt="Terrance Copeland">
+
+                    <h3>Terrance Copeland</h3>
+
+                    <p><strong>Narrator</strong></p>
+
+                    <p>
+                        Terrance’s first role as a narrator
+                        builds on his successful music career
+                        as hip hop artist and rapper
+                        <em>T. Anansi</em> and
+                        <em>True Terry Cope</em>.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="assets/steadymakin.jpg"
+                         alt="Steadymakin">
+
+                    <h3>Steadymakin</h3>
+
+                    <p><strong>Score</strong></p>
+
+                    <p>
+                        Maryland-raised producer Steadymakin
+                        bridges influences from the blog era
+                        with current hip hop and house sounds.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="assets/robin-moore.jpg"
+                         alt="Robin Moore">
+
+                    <h3>Robin Moore</h3>
+
+                    <p><strong>Audio Consultant</strong></p>
+
+                    <p>
+                        Robin Moore of RLizM Music brings decades
+                        of experience in composition, engineering,
+                        performance, and sound design.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="assets/joshua-leonard.jpg"
+                         alt="Joshua Leonard">
+
+                    <h3>Joshua Leonard</h3>
+
+                    <p><strong>Graphic Artist – Poster</strong></p>
+
+                    <p>
+                        Joshua Leonard is an illustrator,
+                        concept artist, character designer,
+                        and traditional 2D animator.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="assets/other-personnel.jpg"
+                         alt="Other Key Personnel">
+
+                    <h3>Other Key Personnel</h3>
+
+                    <p><strong>Production Team</strong></p>
+
+                    <p>
+                        <strong>Jack Smith</strong><br>
+                        Production Designer
+                    </p>
+
+                    <p>
+                        <strong>Regi Allen</strong><br>
+                        Associate Producer / Consultant
+                    </p>
+
+                    <p>
+                        <strong>Anthony Edwards</strong><br>
+                        Animator
                     </p>
                 </div>
 
             </div>
 
         </div>
+
     </section>
 
-    <!-- FINAL -->
+    <!-- WATCH FILM -->
     <section class="scene dark">
+
         <div class="overlay">
+
             <h2>Experience the Story</h2>
-            <p>Coming Soon</p>
+
+            <p>
+                Watch
+                <em>Stepping Off with Juvey-D</em>
+                online.
+            </p>
+
+            <p>
+                <a href="https://watch.eventive.org/dbff26/play/693eddf92f0b836ee75f6137/693b507cadbee91084085370"
+                   target="_blank"
+                   role="button">
+                    Watch the Film
+                </a>
+            </p>
+
         </div>
+
     </section>
 
 </main>
 
-<section aria-label="Subscribe example">
-    <div class="container">
-        <article>
-            <hgroup>
-                <h2>Stay Connected</h2>
-                <h3>Get updates</h3>
-            </hgroup>
-
-            <form class="grid">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <button type="submit" onclick="event.preventDefault()">Subscribe</button>
-            </form>
-        </article>
-    </div>
-</section>
-
 <footer class="container">
-    <small><a href="#">Instagram</a> • <a href="#">Contact</a></small>
+
+    <small>
+        <a href="https://www.facebook.com/p/Stepping-Off-with-Juvey-D-61560368991888/"
+           target="_blank">
+            Facebook
+        </a>
+
+        •
+
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=walphonsoore@gmail.com"
+           target="_blank">
+            Contact
+        </a>
+    </small>
+
 </footer>
 
 <script src="js/script.js"></script>

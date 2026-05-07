@@ -1,231 +1,879 @@
-/* ===== RESET ===== */
+/* =========================================================
+   RESET
+========================================================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== BASE ===== */
+/* =========================================================
+   BASE
+========================================================= */
 body {
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    color: #111;
+
+    background: #0d0d0d;
+
+    color: #f2f2f2;
 
     scroll-behavior: smooth;
+
     padding-top: 80px;
 }
 
-/* ===== NAV ===== */
+/* =========================================================
+   NAVIGATION
+========================================================= */
 nav.container-fluid {
+
     position: fixed;
+
     top: 0;
+
     width: 100%;
+
     z-index: 1000;
 
-    background: rgba(255,255,255,0.9);
+    background: rgba(0,0,0,0.94);
+
     backdrop-filter: blur(10px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+/* nav left */
+.nav-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+/* nav title */
+nav strong {
+
+    color: #fff;
+
+    white-space: nowrap;
+}
+
+/* awards */
+.nav-awards {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.nav-awards img {
+
+    height: 34px;
+
+    width: auto;
+
+    object-fit: contain;
+
+    opacity: 0.95;
+
+    filter:
+        brightness(1.08)
+        contrast(1.05);
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.nav-awards img:hover {
+
+    transform: scale(1.08);
+
+    opacity: 1;
+}
+
+/* nav links */
+nav ul {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
 }
 
 nav ul li a {
+
+    color: #fff;
+
     padding: 10px 15px;
+
+    transition: 0.3s ease;
 }
 
-/* ===== SCENE ===== */
-.scene {
-    min-height: 100vh;
+nav ul li a:hover {
+
+    color: #d9d9d9;
+}
+
+/* =========================================================
+   MAIN
+========================================================= */
+main.container {
+
+    max-width: 100%;
+
+    padding: 0;
+}
+
+/* =========================================================
+   STORY SECTION
+========================================================= */
+.story-section {
+
+    background: #111;
+
+    padding: 120px 20px;
+}
+
+/* story image */
+.story-image {
+
     position: relative;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    max-width: 1100px;
 
-    padding: 100px 20px;
+    margin: 0 auto 60px auto;
+
+    padding: 40px;
+
+    background: #000;
+
+    border-radius: 18px;
+
     overflow: hidden;
 }
 
-/* ===== 🔥 FIXED BACKGROUND IMAGES ONLY ===== */
-.scene > img {
+/* graffiti text */
+.story-image::before {
+
+    content:
+        "JUVEY-D JUVEY-D JUVEY-D JUVEY-D JUVEY-D "
+        "JUVEY-D JUVEY-D JUVEY-D JUVEY-D JUVEY-D";
+
     position: absolute;
-    top: 0;
-    left: 0;
 
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    z-index: 0;
-
-    filter: brightness(0.85);
-}
-
-/* ===== CONTENT BOX ===== */
-.overlay {
-    position: relative;
-    z-index: 2;
-
-    max-width: 800px;
-    width: 100%;
-
-    background: rgba(255,255,255,0.95);
-    padding: 50px;
-    margin: 40px auto;
-
-    border-radius: 12px;
-    text-align: center;
-
-    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-}
-
-/* ===== TEXT ===== */
-.overlay h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
-}
-
-.overlay h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.overlay p {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-/* ===== LIGHT SECTIONS ===== */
-.scene.dark {
-    background: #f4f4f4;
-}
-
-/* ===== CARDS ===== */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.card {
-    background: #fff;
-    border-radius: 12px;
-    padding: 25px;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: 0.3s ease;
-
-    text-align: center;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* ===== 🔥 FIXED CARD IMAGES ===== */
-.card img {
-    position: relative;
-    width: 100%;
-    height: 220px;
-
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-
-    z-index: 1;
-    filter: none;
-}
-
-/* ===== PITCH DECK ===== */
-.pitch-deck {
-    text-align: center;
-}
-
-.pitch-deck h2 {
-    margin-bottom: 30px;
-}
-
-/* ===== SLIDER ===== */
-.slider {
-    position: relative;
-    margin: 20px auto 30px auto;
-    max-width: 1000px;
-    min-height: 400px;
-}
-
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    opacity: 0;
-    transform: scale(0.95);
-    transition: all 0.5s ease;
+    inset: 0;
 
     display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 72px;
+
+    font-weight: 900;
+
+    line-height: 1.5;
+
+    letter-spacing: 6px;
+
+    color: rgba(255,255,255,0.14);
+
+    text-transform: uppercase;
+
+    transform: rotate(-12deg);
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+/* story image */
+.story-image img {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: auto;
+
+    max-width: 100%;
+
+    max-height: 80vh;
+
+    margin: 0 auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.45);
+}
+
+/* story wrapper */
+.story-wrapper {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    background: rgba(255,255,255,0.97);
+
+    padding: 60px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.35);
+}
+
+.story-wrapper h2 {
+
+    font-size: 38px;
+
+    margin-bottom: 25px;
+
+    color: #111;
+}
+
+.story-wrapper p {
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #333;
+
+    margin-bottom: 25px;
+}
+
+/* =========================================================
+   HERO / INTRO SLIDER
+========================================================= */
+.intro-slider {
+
+    position: relative;
+
+    background: #000;
+
+    padding: 40px 0 90px 0;
+
+    overflow: hidden;
+}
+
+/* slides */
+.intro-slide {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+
+    transition: opacity 0.8s ease;
+
+    display: flex;
+
+    align-items: center;
+
     justify-content: center;
 }
 
-.slide.active {
+/* active */
+.intro-slide.active {
+
     opacity: 1;
-    transform: scale(1);
+
     position: relative;
+
     z-index: 2;
 }
 
-.slide img {
+/* hero images */
+.intro-slide img {
+
     width: 100%;
-    max-height: 70vh;
+
+    max-height: 78vh;
+
     object-fit: contain;
 
-    border-radius: 12px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-}
+    object-position: center center;
 
-/* ===== CONTROLS ===== */
-.controls {
-    margin-top: 20px;
-}
-
-.controls button {
     background: #000;
+
+    display: block;
+}
+
+/* =========================================================
+   INTRO CONTROLS
+========================================================= */
+.intro-controls {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+.scene {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 100px 20px;
+
+    background: #111;
+}
+
+/* overlay */
+.overlay {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    background: rgba(255,255,255,0.97);
+
+    padding: 50px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.35);
+}
+
+/* typography */
+.overlay h1 {
+
+    font-size: 46px;
+
+    margin-bottom: 18px;
+
+    color: #111;
+}
+
+.overlay h2 {
+
+    font-size: 34px;
+
+    margin-bottom: 20px;
+
+    color: #111;
+}
+
+.overlay h3 {
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+
+    color: #111;
+}
+
+.overlay p {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #444;
+
+    margin-bottom: 18px;
+}
+
+/* =========================================================
+   VIDEO SLIDER
+========================================================= */
+.video-slider {
+
+    position: relative;
+
+    margin-top: 30px;
+}
+
+.video-slide {
+
+    display: none;
+
+    animation: fadeIn 0.5s ease;
+}
+
+.video-slide.active {
+
+    display: block;
+}
+
+/* fade animation */
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(10px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+/* video wrapper */
+.video-wrapper {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+.video-wrapper video {
+
+    width: 100%;
+
+    display: block;
+
+    border-radius: 14px;
+
+    background: #000;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.4);
+}
+
+/* =========================================================
+   PITCH DECK
+========================================================= */
+.pitch-deck {
+
+    background: #111;
+}
+
+.slider {
+
+    position: relative;
+
+    max-width: 1000px;
+
+    min-height: 400px;
+
+    margin: 20px auto 30px auto;
+}
+
+.slide {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+
+    transform: scale(0.96);
+
+    transition: all 0.5s ease;
+
+    display: flex;
+
+    justify-content: center;
+
+    pointer-events: none;
+}
+
+.slide.active {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+    position: relative;
+
+    z-index: 2;
+
+    pointer-events: auto;
+}
+
+.slide img {
+
+    width: 100%;
+
+    max-height: 70vh;
+
+    object-fit: contain;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.28);
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+.controls {
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 25px;
+}
+
+/* all buttons */
+.controls button,
+.intro-controls button {
+
+    background: rgba(0,0,0,0.78);
+
     color: #fff;
-    border: none;
 
-    padding: 12px 20px;
-    border-radius: 6px;
+    border:
+        1px solid rgba(255,255,255,0.25);
 
-    margin: 0 10px;
+    border-radius: 10px;
+
+    padding: 12px 24px;
+
+    min-width: 120px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
     cursor: pointer;
 
-    transition: 0.3s ease;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease;
+
+    backdrop-filter: blur(6px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.25);
 }
 
-.controls button:hover {
-    background: #333;
+/* hover */
+.controls button:hover,
+.intro-controls button:hover {
+
+    background: #fff;
+
+    color: #000;
+
+    transform: translateY(-2px);
 }
 
-.controls button:active {
-    transform: scale(0.95);
+/* active */
+.controls button:active,
+.intro-controls button:active {
+
+    transform: scale(0.96);
 }
 
-/* ===== RESPONSIVE ===== */
+/* =========================================================
+   CARDS
+========================================================= */
+.cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 30px;
+
+    margin-top: 40px;
+}
+
+/* card */
+.card {
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    transition: all 0.35s ease;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* hover */
+.card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.14);
+}
+
+/* card image */
+.card img {
+
+    width: 100%;
+
+    height: auto;
+
+    max-height: 340px;
+
+    object-fit: contain;
+
+    background: #f2f2f2;
+
+    border-radius: 14px;
+
+    margin-bottom: 18px;
+
+    transition: transform 0.4s ease;
+}
+
+/* image hover */
+.card:hover img {
+
+    transform: scale(1.03);
+}
+
+/* text */
+.card h3 {
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+
+    color: #111;
+}
+
+.card p {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #555;
+}
+
+/* =========================================================
+   CREATOR SLIDER
+========================================================= */
+.creator-slider {
+
+    position: relative;
+
+    max-width: 520px;
+
+    margin: 40px auto 0 auto;
+}
+
+.creator-slide {
+
+    display: none;
+
+    animation: fadeIn 0.5s ease;
+}
+
+.creator-slide.active {
+
+    display: block;
+}
+
+.creator-slide .card {
+
+    min-height: 650px;
+}
+
+.creator-slide .card img {
+
+    height: 320px;
+
+    object-fit: cover;
+
+    object-position: center top;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+footer {
+
+    padding: 40px 0;
+
+    text-align: center;
+
+    color: #ccc;
+}
+
+footer a {
+
+    color: #fff;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 900px) {
+
+    body {
+
+        padding-top: 120px;
+    }
+
+    nav.container-fluid {
+
+        align-items: flex-start;
+
+    gap: 12px;
+    }
+
+    .nav-left {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+
+    .nav-awards {
+
+        flex-wrap: wrap;
+
+        gap: 8px;
+    }
+
+    .nav-awards img {
+
+        height: 28px;
+    }
+
+    nav ul {
+
+        flex-wrap: wrap;
+    }
+}
+
 @media (max-width: 768px) {
 
+    .story-image {
+
+        padding: 20px;
+    }
+
+    .story-image::before {
+
+        font-size: 34px;
+    }
+
+    .story-wrapper {
+
+        padding: 35px 28px;
+    }
+
+    .story-wrapper h2 {
+
+        font-size: 30px;
+    }
+
+    .story-wrapper p {
+
+        font-size: 16px;
+    }
+
     .overlay {
-        padding: 25px;
+
+        padding: 30px 25px;
     }
 
     .overlay h1 {
-        font-size: 28px;
+
+        font-size: 32px;
     }
 
     .overlay h2 {
+
+        font-size: 26px;
+    }
+
+    .overlay h3 {
+
         font-size: 22px;
     }
 
     .overlay p {
+
         font-size: 15px;
+    }
+
+    .cards {
+
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+
+        max-height: 300px;
+    }
+
+    .controls button,
+    .intro-controls button {
+
+        min-width: 110px;
+
+        margin: 5px;
     }
 }
