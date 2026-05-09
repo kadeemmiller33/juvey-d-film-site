@@ -11,6 +11,7 @@
    BASE
 ========================================================= */
 body {
+
     font-family: Arial, sans-serif;
 
     background: #0d0d0d;
@@ -18,6 +19,8 @@ body {
     color: #f2f2f2;
 
     scroll-behavior: smooth;
+
+    overflow-x: hidden;
 
     padding-top: 80px;
 }
@@ -49,6 +52,8 @@ nav.container-fluid {
     justify-content: space-between;
 
     gap: 24px;
+
+    padding: 14px 22px;
 }
 
 /* nav left */
@@ -67,6 +72,10 @@ nav strong {
     color: #fff;
 
     white-space: nowrap;
+
+    font-size: 20px;
+
+    letter-spacing: 0.5px;
 }
 
 /* awards */
@@ -113,6 +122,13 @@ nav ul {
     align-items: center;
 
     gap: 10px;
+
+    margin: 0;
+}
+
+nav ul li {
+
+    list-style: none;
 }
 
 nav ul li a {
@@ -121,12 +137,18 @@ nav ul li a {
 
     padding: 10px 15px;
 
-    transition: 0.3s ease;
+    border-radius: 8px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
 }
 
 nav ul li a:hover {
 
-    color: #d9d9d9;
+    background: rgba(255,255,255,0.1);
+
+    color: #fff;
 }
 
 /* =========================================================
@@ -484,138 +506,34 @@ main.container {
 }
 
 /* =========================================================
-   PITCH DECK
+   UPCOMING EVENTS
 ========================================================= */
-.pitch-deck {
+.upcoming-events-section {
 
-    background: #111;
+    background: #0f0f0f;
 }
 
-.slider {
+.events-image {
 
-    position: relative;
-
-    max-width: 1000px;
-
-    min-height: 400px;
-
-    margin: 20px auto 30px auto;
-}
-
-.slide {
-
-    position: absolute;
-
-    inset: 0;
-
-    opacity: 0;
-
-    transform: scale(0.96);
-
-    transition: all 0.5s ease;
+    margin-top: 30px;
 
     display: flex;
 
     justify-content: center;
-
-    pointer-events: none;
 }
 
-.slide.active {
-
-    opacity: 1;
-
-    transform: scale(1);
-
-    position: relative;
-
-    z-index: 2;
-
-    pointer-events: auto;
-}
-
-.slide img {
+.events-image img {
 
     width: 100%;
 
-    max-height: 70vh;
+    max-width: 900px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.45);
 
     object-fit: contain;
-
-    border-radius: 14px;
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,0.28);
-}
-
-/* =========================================================
-   BUTTONS
-========================================================= */
-.controls {
-
-    display: flex;
-
-    gap: 15px;
-
-    align-items: center;
-
-    justify-content: center;
-
-    margin-top: 25px;
-}
-
-/* all buttons */
-.controls button,
-.intro-controls button {
-
-    background: rgba(0,0,0,0.78);
-
-    color: #fff;
-
-    border:
-        1px solid rgba(255,255,255,0.25);
-
-    border-radius: 10px;
-
-    padding: 12px 24px;
-
-    min-width: 120px;
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    letter-spacing: 0.5px;
-
-    cursor: pointer;
-
-    transition:
-        background 0.3s ease,
-        color 0.3s ease,
-        transform 0.2s ease;
-
-    backdrop-filter: blur(6px);
-
-    box-shadow:
-        0 10px 25px rgba(0,0,0,0.25);
-}
-
-/* hover */
-.controls button:hover,
-.intro-controls button:hover {
-
-    background: #fff;
-
-    color: #000;
-
-    transform: translateY(-2px);
-}
-
-/* active */
-.controls button:active,
-.intro-controls button:active {
-
-    transform: scale(0.96);
 }
 
 /* =========================================================
@@ -709,41 +627,73 @@ main.container {
 }
 
 /* =========================================================
-   CREATOR SLIDER
+   BUTTONS
 ========================================================= */
-.creator-slider {
+.controls {
 
-    position: relative;
+    display: flex;
 
-    max-width: 520px;
+    gap: 15px;
 
-    margin: 40px auto 0 auto;
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 25px;
 }
 
-.creator-slide {
+/* all buttons */
+.controls button,
+.intro-controls button {
 
-    display: none;
+    background: rgba(0,0,0,0.78);
 
-    animation: fadeIn 0.5s ease;
+    color: #fff;
+
+    border:
+        1px solid rgba(255,255,255,0.25);
+
+    border-radius: 10px;
+
+    padding: 12px 24px;
+
+    min-width: 120px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease;
+
+    backdrop-filter: blur(6px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.25);
 }
 
-.creator-slide.active {
+/* hover */
+.controls button:hover,
+.intro-controls button:hover {
 
-    display: block;
+    background: #fff;
+
+    color: #000;
+
+    transform: translateY(-2px);
 }
 
-.creator-slide .card {
+/* active */
+.controls button:active,
+.intro-controls button:active {
 
-    min-height: 650px;
-}
-
-.creator-slide .card img {
-
-    height: 320px;
-
-    object-fit: cover;
-
-    object-position: center top;
+    transform: scale(0.96);
 }
 
 /* =========================================================
@@ -766,18 +716,26 @@ footer a {
 /* =========================================================
    RESPONSIVE
 ========================================================= */
+
+/* =========================
+   TABLETS
+========================= */
 @media (max-width: 900px) {
 
     body {
 
-        padding-top: 120px;
+        padding-top: 140px;
     }
 
     nav.container-fluid {
 
+        flex-direction: column;
+
         align-items: flex-start;
 
-    gap: 12px;
+        justify-content: center;
+
+        gap: 14px;
     }
 
     .nav-left {
@@ -786,7 +744,7 @@ footer a {
 
         align-items: flex-start;
 
-        gap: 8px;
+        gap: 10px;
     }
 
     .nav-awards {
@@ -798,30 +756,26 @@ footer a {
 
     .nav-awards img {
 
-        height: 28px;
+        height: 26px;
     }
 
     nav ul {
 
+        width: 100%;
+
         flex-wrap: wrap;
-    }
-}
 
-@media (max-width: 768px) {
-
-    .story-image {
-
-        padding: 20px;
+        gap: 8px;
     }
 
-    .story-image::before {
+    .story-section {
 
-        font-size: 34px;
+        padding: 80px 20px;
     }
 
     .story-wrapper {
 
-        padding: 35px 28px;
+        padding: 40px 30px;
     }
 
     .story-wrapper h2 {
@@ -836,27 +790,99 @@ footer a {
 
     .overlay {
 
-        padding: 30px 25px;
+        padding: 35px 28px;
+    }
+
+    .intro-slide img {
+
+        max-height: 60vh;
+    }
+
+    .cards {
+
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+    body {
+
+        padding-top: 170px;
+    }
+
+    .story-section {
+
+        padding: 60px 14px;
+    }
+
+    .story-image {
+
+        padding: 14px;
+    }
+
+    .story-image::before {
+
+        font-size: 24px;
+
+        letter-spacing: 2px;
+    }
+
+    .story-wrapper {
+
+        padding: 26px 20px;
+    }
+
+    .story-wrapper h2 {
+
+        font-size: 24px;
+    }
+
+    .story-wrapper p {
+
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .scene {
+
+        min-height: auto;
+
+        padding: 60px 14px;
+    }
+
+    .overlay {
+
+        padding: 24px 18px;
     }
 
     .overlay h1 {
 
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .overlay h2 {
 
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .overlay h3 {
 
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .overlay p {
 
-        font-size: 15px;
+        font-size: 14px;
+    }
+
+    .intro-slide img {
+
+        max-height: 48vh;
     }
 
     .cards {
@@ -864,16 +890,61 @@ footer a {
         grid-template-columns: 1fr;
     }
 
-    .card img {
+    .controls,
+    .intro-controls {
 
-        max-height: 300px;
+        flex-wrap: wrap;
     }
 
     .controls button,
     .intro-controls button {
 
-        min-width: 110px;
+        width: 100%;
 
-        margin: 5px;
+        max-width: 220px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+
+    body {
+
+        padding-top: 190px;
+    }
+
+    nav strong {
+
+        font-size: 16px;
+    }
+
+    .nav-awards img {
+
+        height: 22px;
+    }
+
+    .overlay h2 {
+
+        font-size: 22px;
+    }
+
+    .overlay p {
+
+        font-size: 13px;
+    }
+
+    .intro-slide img {
+
+        max-height: 42vh;
+    }
+
+    .controls button,
+    .intro-controls button {
+
+        font-size: 12px;
+
+        padding: 10px 14px;
     }
 }
