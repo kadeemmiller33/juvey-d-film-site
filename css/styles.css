@@ -2,8 +2,11 @@
    RESET
 ========================================================= */
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
 }
 
@@ -62,8 +65,6 @@ nav.container-fluid {
     display: flex;
 
     align-items: center;
-
-    gap: 18px;
 }
 
 /* nav title */
@@ -73,41 +74,13 @@ nav strong {
 
     white-space: nowrap;
 
-    font-size: 20px;
+    font-size: 22px;
 
-    letter-spacing: 0.5px;
-}
+    font-weight: 700;
 
-/* awards */
-.nav-awards {
+    letter-spacing: 1px;
 
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-}
-
-.nav-awards img {
-
-    height: 32px;
-
-    width: auto;
-
-    object-fit: contain;
-
-    opacity: 0.95;
-
-    transition:
-        transform 0.3s ease,
-        opacity 0.3s ease;
-}
-
-.nav-awards img:hover {
-
-    transform: scale(1.08);
-
-    opacity: 1;
+    text-transform: uppercase;
 }
 
 /* nav links */
@@ -479,55 +452,6 @@ main.container {
 }
 
 /* =========================================================
-   PITCH DECK
-========================================================= */
-.pitch-deck {
-
-    background: #111;
-}
-
-.slider {
-
-    position: relative;
-
-    width: 100%;
-
-    margin: 30px auto;
-}
-
-.slide {
-
-    display: none;
-
-    justify-content: center;
-
-    align-items: center;
-}
-
-.slide.active {
-
-    display: flex;
-}
-
-.slide img {
-
-    width: 100%;
-
-    max-width: 1000px;
-
-    height: auto;
-
-    max-height: 75vh;
-
-    object-fit: contain;
-
-    border-radius: 16px;
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,0.35);
-}
-
-/* =========================================================
    UPCOMING EVENTS
 ========================================================= */
 .upcoming-events-section {
@@ -556,6 +480,59 @@ main.container {
         0 20px 50px rgba(0,0,0,0.35);
 
     object-fit: contain;
+}
+
+/* =========================================================
+   PITCH DECK
+========================================================= */
+.pitch-deck {
+
+    background: #111;
+}
+
+/* desktop slider */
+.slider {
+
+    position: relative;
+
+    width: 100%;
+
+    margin: 30px auto;
+}
+
+/* individual slides */
+.slide {
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+/* active slide */
+.slide.active {
+
+    display: flex;
+}
+
+/* pitch images */
+.slide img {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    height: auto;
+
+    max-height: 75vh;
+
+    object-fit: contain;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.35);
 }
 
 /* =========================================================
@@ -701,16 +678,58 @@ main.container {
 ========================================================= */
 footer {
 
-    padding: 40px 20px;
+    padding: 50px 20px;
 
     text-align: center;
 
     color: #ccc;
+
+    background: #0a0a0a;
 }
 
 footer a {
 
     color: #fff;
+}
+
+/* =========================================================
+   FOOTER AWARDS
+========================================================= */
+.footer-awards {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-bottom: 24px;
+}
+
+.footer-awards img {
+
+    height: 52px;
+
+    width: auto;
+
+    object-fit: contain;
+
+    opacity: 0.95;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.footer-awards img:hover {
+
+    transform: scale(1.05);
+
+    opacity: 1;
 }
 
 /* =========================================================
@@ -720,40 +739,23 @@ footer a {
 
     body {
 
-        padding-top: 130px;
+        padding-top: 120px;
     }
 
     nav.container-fluid {
 
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 14px;
-    }
-
-    .nav-left {
+        justify-content: center;
 
         flex-direction: column;
 
-        align-items: flex-start;
-
-        gap: 10px;
-    }
-
-    .nav-awards {
-
-        flex-wrap: wrap;
-    }
-
-    .nav-awards img {
-
-        height: 24px;
+        padding: 12px 16px;
     }
 
     nav ul {
 
         flex-wrap: wrap;
+
+        justify-content: center;
 
         gap: 8px;
     }
@@ -778,6 +780,11 @@ footer a {
 
         max-height: 60vh;
     }
+
+    .footer-awards img {
+
+        height: 42px;
+    }
 }
 
 /* =========================================================
@@ -787,22 +794,34 @@ footer a {
 
     body {
 
-        padding-top: 150px;
+        padding-top: 120px;
     }
 
     nav.container-fluid {
 
-        padding: 12px;
+        justify-content: center;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 10px;
     }
 
     nav strong {
 
         font-size: 16px;
+
+        text-align: center;
     }
 
     nav ul {
 
         gap: 4px;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
     }
 
     nav ul li a {
@@ -884,12 +903,73 @@ footer a {
         line-height: 1.7;
     }
 
-    .intro-slide img,
-    .slide img {
+    .intro-slide img {
 
         max-height: 45vh;
 
         border-radius: 12px;
+    }
+
+    /* =====================================================
+       MOBILE PITCH DECK SCROLL
+    ===================================================== */
+    .slider {
+
+        display: flex;
+
+        overflow-x: auto;
+
+        gap: 14px;
+
+        scroll-snap-type: x mandatory;
+
+        scroll-behavior: smooth;
+
+        -webkit-overflow-scrolling: touch;
+
+        padding-bottom: 10px;
+    }
+
+    /* hide scrollbar */
+    .slider::-webkit-scrollbar {
+
+        display: none;
+    }
+
+    .slider {
+
+        scrollbar-width: none;
+    }
+
+    .slide {
+
+        display: block !important;
+
+        min-width: 92%;
+
+        flex-shrink: 0;
+
+        scroll-snap-align: center;
+    }
+
+    .slide.active {
+
+        display: block !important;
+    }
+
+    .slide img {
+
+        width: 100%;
+
+        max-height: none;
+
+        border-radius: 14px;
+    }
+
+    /* hide desktop buttons on mobile */
+    .pitch-deck .controls {
+
+        display: none;
     }
 
     .cards {
@@ -933,6 +1013,11 @@ footer a {
 
         border-radius: 12px;
     }
+
+    .footer-awards img {
+
+        height: 38px;
+    }
 }
 
 /* =========================================================
@@ -942,17 +1027,14 @@ footer a {
 
     body {
 
-        padding-top: 180px;
+        padding-top: 110px;
     }
 
-    nav strong {
+    nav ul li a {
 
-        font-size: 15px;
-    }
+        font-size: 11px;
 
-    .nav-awards img {
-
-        height: 20px;
+        padding: 5px 8px;
     }
 
     .overlay h2 {
@@ -965,8 +1047,7 @@ footer a {
         font-size: 13px;
     }
 
-    .intro-slide img,
-    .slide img {
+    .intro-slide img {
 
         max-height: 38vh;
     }
@@ -977,5 +1058,10 @@ footer a {
         font-size: 12px;
 
         padding: 9px 14px;
+    }
+
+    .footer-awards img {
+
+        height: 30px;
     }
 }
