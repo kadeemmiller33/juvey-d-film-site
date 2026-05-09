@@ -911,7 +911,7 @@ footer a {
     }
 
     /* =====================================================
-       MOBILE PITCH DECK SCROLL
+       MOBILE PITCH DECK FIX
     ===================================================== */
     .slider {
 
@@ -919,7 +919,9 @@ footer a {
 
         overflow-x: auto;
 
-        gap: 14px;
+        overflow-y: hidden;
+
+        gap: 12px;
 
         scroll-snap-type: x mandatory;
 
@@ -927,7 +929,7 @@ footer a {
 
         -webkit-overflow-scrolling: touch;
 
-        padding-bottom: 10px;
+        padding: 10px 4px 14px;
     }
 
     /* hide scrollbar */
@@ -941,11 +943,16 @@ footer a {
         scrollbar-width: none;
     }
 
+    /* slides */
     .slide {
 
-        display: block !important;
+        display: flex !important;
 
-        min-width: 92%;
+        justify-content: center;
+
+        align-items: center;
+
+        min-width: 88%;
 
         flex-shrink: 0;
 
@@ -954,19 +961,24 @@ footer a {
 
     .slide.active {
 
-        display: block !important;
+        display: flex !important;
     }
 
+    /* images */
     .slide img {
 
         width: 100%;
 
-        max-height: none;
+        height: auto;
+
+        max-height: 70vh;
+
+        object-fit: contain;
 
         border-radius: 14px;
     }
 
-    /* hide desktop buttons on mobile */
+    /* hide desktop controls */
     .pitch-deck .controls {
 
         display: none;
