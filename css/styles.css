@@ -38,7 +38,7 @@ nav.container-fluid {
 
     z-index: 1000;
 
-    background: rgba(0,0,0,0.94);
+    background: rgba(0,0,0,0.92);
 
     backdrop-filter: blur(10px);
 
@@ -90,17 +90,13 @@ nav strong {
 
 .nav-awards img {
 
-    height: 34px;
+    height: 32px;
 
     width: auto;
 
     object-fit: contain;
 
     opacity: 0.95;
-
-    filter:
-        brightness(1.08)
-        contrast(1.05);
 
     transition:
         transform 0.3s ease,
@@ -135,9 +131,11 @@ nav ul li a {
 
     color: #fff;
 
-    padding: 10px 15px;
+    padding: 10px 14px;
 
     border-radius: 8px;
+
+    text-decoration: none;
 
     transition:
         background 0.3s ease,
@@ -168,7 +166,7 @@ main.container {
 
     background: #111;
 
-    padding: 120px 20px;
+    padding: 90px 20px;
 }
 
 /* story image */
@@ -176,11 +174,11 @@ main.container {
 
     position: relative;
 
-    max-width: 1100px;
+    max-width: 1000px;
 
-    margin: 0 auto 60px auto;
+    margin: 0 auto 40px auto;
 
-    padding: 40px;
+    padding: 24px;
 
     background: #000;
 
@@ -210,15 +208,15 @@ main.container {
 
     padding: 20px;
 
-    font-size: 72px;
+    font-size: 56px;
 
     font-weight: 900;
 
-    line-height: 1.5;
+    line-height: 1.4;
 
-    letter-spacing: 6px;
+    letter-spacing: 5px;
 
-    color: rgba(255,255,255,0.14);
+    color: rgba(255,255,255,0.10);
 
     text-transform: uppercase;
 
@@ -236,11 +234,9 @@ main.container {
 
     z-index: 2;
 
-    width: auto;
+    width: 100%;
 
-    max-width: 100%;
-
-    max-height: 80vh;
+    max-height: 75vh;
 
     margin: 0 auto;
 
@@ -248,7 +244,7 @@ main.container {
 
     object-fit: contain;
 
-    border-radius: 10px;
+    border-radius: 12px;
 
     box-shadow:
         0 20px 60px rgba(0,0,0,0.45);
@@ -257,38 +253,38 @@ main.container {
 /* story wrapper */
 .story-wrapper {
 
-    max-width: 900px;
+    max-width: 850px;
 
     margin: 0 auto;
 
     background: rgba(255,255,255,0.97);
 
-    padding: 60px;
+    padding: 45px;
 
     border-radius: 18px;
 
     box-shadow:
-        0 20px 60px rgba(0,0,0,0.35);
+        0 20px 60px rgba(0,0,0,0.30);
 }
 
 .story-wrapper h2 {
 
-    font-size: 38px;
+    font-size: 34px;
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
     color: #111;
 }
 
 .story-wrapper p {
 
-    font-size: 18px;
+    font-size: 17px;
 
-    line-height: 1.9;
+    line-height: 1.8;
 
     color: #333;
 
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
 
 /* =========================================================
@@ -300,7 +296,7 @@ main.container {
 
     background: #000;
 
-    padding: 40px 0 90px 0;
+    padding: 30px 0;
 
     overflow: hidden;
 }
@@ -308,29 +304,19 @@ main.container {
 /* slides */
 .intro-slide {
 
-    position: absolute;
+    display: none;
 
-    inset: 0;
-
-    opacity: 0;
-
-    transition: opacity 0.8s ease;
-
-    display: flex;
+    justify-content: center;
 
     align-items: center;
 
-    justify-content: center;
+    width: 100%;
 }
 
 /* active */
 .intro-slide.active {
 
-    opacity: 1;
-
-    position: relative;
-
-    z-index: 2;
+    display: flex;
 }
 
 /* hero images */
@@ -338,15 +324,22 @@ main.container {
 
     width: 100%;
 
-    max-height: 78vh;
+    max-width: 1200px;
+
+    height: auto;
+
+    max-height: 75vh;
 
     object-fit: contain;
 
-    object-position: center center;
+    border-radius: 16px;
 
-    background: #000;
+    margin: 0 auto;
 
     display: block;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.35);
 }
 
 /* =========================================================
@@ -362,7 +355,7 @@ main.container {
 
     gap: 15px;
 
-    margin-top: 30px;
+    margin-top: 24px;
 }
 
 /* =========================================================
@@ -370,7 +363,7 @@ main.container {
 ========================================================= */
 .scene {
 
-    min-height: 100vh;
+    min-height: auto;
 
     display: flex;
 
@@ -378,7 +371,7 @@ main.container {
 
     justify-content: center;
 
-    padding: 100px 20px;
+    padding: 80px 20px;
 
     background: #111;
 }
@@ -386,26 +379,26 @@ main.container {
 /* overlay */
 .overlay {
 
-    width: 100%;
+    width: 92%;
 
-    max-width: 1000px;
+    max-width: 1100px;
 
     background: rgba(255,255,255,0.97);
 
-    padding: 50px;
+    padding: 42px;
 
     border-radius: 18px;
 
     text-align: center;
 
     box-shadow:
-        0 20px 60px rgba(0,0,0,0.35);
+        0 20px 60px rgba(0,0,0,0.30);
 }
 
 /* typography */
 .overlay h1 {
 
-    font-size: 46px;
+    font-size: 42px;
 
     margin-bottom: 18px;
 
@@ -414,16 +407,16 @@ main.container {
 
 .overlay h2 {
 
-    font-size: 34px;
+    font-size: 32px;
 
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 
     color: #111;
 }
 
 .overlay h3 {
 
-    font-size: 24px;
+    font-size: 22px;
 
     margin-bottom: 10px;
 
@@ -438,7 +431,7 @@ main.container {
 
     color: #444;
 
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 
 /* =========================================================
@@ -454,31 +447,11 @@ main.container {
 .video-slide {
 
     display: none;
-
-    animation: fadeIn 0.5s ease;
 }
 
 .video-slide.active {
 
     display: block;
-}
-
-/* fade animation */
-@keyframes fadeIn {
-
-    from {
-
-        opacity: 0;
-
-        transform: translateY(10px);
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform: translateY(0);
-    }
 }
 
 /* video wrapper */
@@ -502,7 +475,56 @@ main.container {
     background: #000;
 
     box-shadow:
-        0 20px 60px rgba(0,0,0,0.4);
+        0 20px 50px rgba(0,0,0,0.35);
+}
+
+/* =========================================================
+   PITCH DECK
+========================================================= */
+.pitch-deck {
+
+    background: #111;
+}
+
+.slider {
+
+    position: relative;
+
+    width: 100%;
+
+    margin: 30px auto;
+}
+
+.slide {
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.slide.active {
+
+    display: flex;
+}
+
+.slide img {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    height: auto;
+
+    max-height: 75vh;
+
+    object-fit: contain;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.35);
 }
 
 /* =========================================================
@@ -515,7 +537,7 @@ main.container {
 
 .events-image {
 
-    margin-top: 30px;
+    margin-top: 24px;
 
     display: flex;
 
@@ -531,7 +553,7 @@ main.container {
     border-radius: 18px;
 
     box-shadow:
-        0 20px 60px rgba(0,0,0,0.45);
+        0 20px 50px rgba(0,0,0,0.35);
 
     object-fit: contain;
 }
@@ -546,9 +568,9 @@ main.container {
     grid-template-columns:
         repeat(auto-fit, minmax(260px, 1fr));
 
-    gap: 30px;
+    gap: 24px;
 
-    margin-top: 40px;
+    margin-top: 35px;
 }
 
 /* card */
@@ -558,15 +580,15 @@ main.container {
 
     border-radius: 18px;
 
-    padding: 25px;
-
-    position: relative;
+    padding: 22px;
 
     overflow: hidden;
 
     text-align: center;
 
-    transition: all 0.35s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 
     box-shadow:
         0 10px 30px rgba(0,0,0,0.08);
@@ -575,10 +597,10 @@ main.container {
 /* hover */
 .card:hover {
 
-    transform: translateY(-8px);
+    transform: translateY(-6px);
 
     box-shadow:
-        0 20px 50px rgba(0,0,0,0.14);
+        0 20px 40px rgba(0,0,0,0.12);
 }
 
 /* card image */
@@ -586,9 +608,7 @@ main.container {
 
     width: 100%;
 
-    height: auto;
-
-    max-height: 340px;
+    max-height: 320px;
 
     object-fit: contain;
 
@@ -597,14 +617,6 @@ main.container {
     border-radius: 14px;
 
     margin-bottom: 18px;
-
-    transition: transform 0.4s ease;
-}
-
-/* image hover */
-.card:hover img {
-
-    transform: scale(1.03);
 }
 
 /* text */
@@ -639,7 +651,7 @@ main.container {
 
     justify-content: center;
 
-    margin-top: 25px;
+    margin-top: 24px;
 }
 
 /* all buttons */
@@ -655,27 +667,22 @@ main.container {
 
     border-radius: 10px;
 
-    padding: 12px 24px;
+    padding: 12px 22px;
 
-    min-width: 120px;
+    min-width: 110px;
 
     font-size: 14px;
 
     font-weight: 700;
 
-    letter-spacing: 0.5px;
-
     cursor: pointer;
 
     transition:
         background 0.3s ease,
-        color 0.3s ease,
         transform 0.2s ease;
 
-    backdrop-filter: blur(6px);
-
     box-shadow:
-        0 10px 25px rgba(0,0,0,0.25);
+        0 10px 25px rgba(0,0,0,0.20);
 }
 
 /* hover */
@@ -689,19 +696,12 @@ main.container {
     transform: translateY(-2px);
 }
 
-/* active */
-.controls button:active,
-.intro-controls button:active {
-
-    transform: scale(0.96);
-}
-
 /* =========================================================
    FOOTER
 ========================================================= */
 footer {
 
-    padding: 40px 0;
+    padding: 40px 20px;
 
     text-align: center;
 
@@ -714,17 +714,13 @@ footer a {
 }
 
 /* =========================================================
-   RESPONSIVE
-========================================================= */
-
-/* =========================
    TABLETS
-========================= */
+========================================================= */
 @media (max-width: 900px) {
 
     body {
 
-        padding-top: 140px;
+        padding-top: 130px;
     }
 
     nav.container-fluid {
@@ -732,8 +728,6 @@ footer a {
         flex-direction: column;
 
         align-items: flex-start;
-
-        justify-content: center;
 
         gap: 14px;
     }
@@ -750,90 +744,96 @@ footer a {
     .nav-awards {
 
         flex-wrap: wrap;
-
-        gap: 8px;
     }
 
     .nav-awards img {
 
-        height: 26px;
+        height: 24px;
     }
 
     nav ul {
-
-        width: 100%;
 
         flex-wrap: wrap;
 
         gap: 8px;
     }
 
-    .story-section {
-
-        padding: 80px 20px;
-    }
-
     .story-wrapper {
-
-        padding: 40px 30px;
-    }
-
-    .story-wrapper h2 {
-
-        font-size: 30px;
-    }
-
-    .story-wrapper p {
-
-        font-size: 16px;
-    }
-
-    .overlay {
 
         padding: 35px 28px;
     }
 
-    .intro-slide img {
+    .overlay {
 
-        max-height: 60vh;
+        padding: 32px 26px;
     }
 
     .cards {
 
         grid-template-columns: 1fr 1fr;
     }
+
+    .intro-slide img,
+    .slide img {
+
+        max-height: 60vh;
+    }
 }
 
-/* =========================
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 @media (max-width: 768px) {
 
     body {
 
-        padding-top: 170px;
+        padding-top: 150px;
+    }
+
+    nav.container-fluid {
+
+        padding: 12px;
+    }
+
+    nav strong {
+
+        font-size: 16px;
+    }
+
+    nav ul {
+
+        gap: 4px;
+    }
+
+    nav ul li a {
+
+        padding: 6px 10px;
+
+        font-size: 12px;
     }
 
     .story-section {
 
-        padding: 60px 14px;
+        padding: 50px 14px;
     }
 
     .story-image {
 
-        padding: 14px;
+        padding: 10px;
+
+        margin-bottom: 24px;
     }
 
     .story-image::before {
 
-        font-size: 24px;
+        font-size: 22px;
 
         letter-spacing: 2px;
     }
 
     .story-wrapper {
 
-        padding: 26px 20px;
+        padding: 22px 18px;
     }
 
     .story-wrapper h2 {
@@ -843,21 +843,23 @@ footer a {
 
     .story-wrapper p {
 
-        font-size: 15px;
+        font-size: 14px;
 
         line-height: 1.7;
     }
 
     .scene {
 
-        min-height: auto;
-
-        padding: 60px 14px;
+        padding: 50px 12px;
     }
 
     .overlay {
 
-        padding: 24px 18px;
+        width: 100%;
+
+        padding: 20px 16px;
+
+        border-radius: 14px;
     }
 
     .overlay h1 {
@@ -878,51 +880,79 @@ footer a {
     .overlay p {
 
         font-size: 14px;
+
+        line-height: 1.7;
     }
 
-    .intro-slide img {
+    .intro-slide img,
+    .slide img {
 
-        max-height: 48vh;
+        max-height: 45vh;
+
+        border-radius: 12px;
     }
 
     .cards {
 
         grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .card {
+
+        padding: 18px;
+    }
+
+    .card img {
+
+        max-height: 240px;
     }
 
     .controls,
     .intro-controls {
 
         flex-wrap: wrap;
+
+        gap: 10px;
     }
 
     .controls button,
     .intro-controls button {
 
-        width: 100%;
+        width: auto;
 
-        max-width: 220px;
+        min-width: 110px;
+
+        padding: 10px 16px;
+
+        font-size: 13px;
+    }
+
+    .events-image img {
+
+        border-radius: 12px;
     }
 }
 
-/* =========================
+/* =========================================================
    SMALL MOBILE
-========================= */
+========================================================= */
 @media (max-width: 480px) {
 
     body {
 
-        padding-top: 190px;
+        padding-top: 180px;
     }
 
     nav strong {
 
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .nav-awards img {
 
-        height: 22px;
+        height: 20px;
     }
 
     .overlay h2 {
@@ -935,9 +965,10 @@ footer a {
         font-size: 13px;
     }
 
-    .intro-slide img {
+    .intro-slide img,
+    .slide img {
 
-        max-height: 42vh;
+        max-height: 38vh;
     }
 
     .controls button,
@@ -945,6 +976,6 @@ footer a {
 
         font-size: 12px;
 
-        padding: 10px 14px;
+        padding: 9px 14px;
     }
 }
